@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- Tabla de productos-->
+    <table class="tabla" style="margin-top: 5%;">
+        <tr>
+            <th>#id</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Acción</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Coca Cola</td>
+            <td>10</td>
+            <td>10</td>
+            <td><button producto-id="1" nombre="Coca Cola" precio="10" cantidad="10" onclick="agregarProducto(this)">Agregar</button></td>            
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Pepsi</td>
+            <td>5</td>
+            <td>5</td>
+            <td><button producto-id="2" nombre="Pepsi" precio="5" cantidad="5" onclick="agregarProducto(this)">Agregar</button></td>            
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Otro</td>
+            <td>2</td>
+            <td>2</td>
+            <td><button producto-id="3" nombre="Otro" precio="2" cantidad="2" onclick="agregarProducto(this)">Agregar</button></td>            
+        </tr>
+    </table>
+    <!-- /Tabla de productos-->
+
+    <!-- Tabla de Carrito-->
+    <table class="tabla" style="margin-top: 10%;">
+        <thead>
+            <tr>
+                <th>#id</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Acción</th>
+            </tr>
+        </thead>
+        <tbody id="carrito">
+
+        
+        
+    </table>
+    <!-- /Tabla de Carrito-->
+</body>
+<script>
+
+function agregarProducto(producto){
+    var nombre = producto.getAttribute('nombre');
+    var precio = producto.getAttribute('precio');
+    var cantidad = producto.getAttribute('cantidad');
+    var id = producto.getAttribute('producto-id');
+    document.getElementById('carrito').innerHTML += '<tr><td>'+id+'</td><td>'+nombre+'</td><td>'+precio+'</td><td>1</td></tr>';
+
+}
+   
+
+</script>
+</html>

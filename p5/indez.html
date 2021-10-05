@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>N1</th>
+            <th>operacion</th>
+            <th>N2</th>
+            <th>total</th>
+            <th>accion</th>
+        </tr>
+        <tr>
+            <th><input type="text" id="v1"> </th>
+            <th>
+                <select name="up" id="opera">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+            </th>
+            <th><input type="text" id="v2"></th>
+            <th><input type="text" id="total"></th>
+            <th><button onclick="hola()">calcula</button></th>
+
+        </tr>
+    </table>
+</body>
+<script>
+    function hola() {
+let N1= document.getElementById("v1").value;
+let n2= document.getElementById("v2").value;
+let up= document.getElementById("opera").value;
+let total=0;
+switch(up){
+        case "+":
+        total=parseInt(N1)+ parseInt(n2);
+        break;
+        case "-":
+        total=parseInt(N1)-parseInt(n2);
+        break;
+        
+
+    }
+    document.getElementById(total).value=total;
+ }
+</script>
+</html>
